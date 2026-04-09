@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Lernpause - Flexbox</title>
+    <link rel="stylesheet" name="stylesheet" href="styles-flexboxes.css">
+</head>
+
+<body>
+
+    <!-- FLEXBOX 1: <nav> als Flex-Container
+         → Links nebeneinander, mit gap zentriert -->
+    <nav>
+        <a href="#about">Über uns</a>
+        <a href="#about">Über</a>
+        <a href="#cafe">Das Café</a>
+        <a href="#coffee">Kaffee</a>
+        <a href="#openinghours">Öffnungszeiten</a>
+        <a href="wete.html">WETE</a>
+    </nav>
+
+    <!-- FLEXBOX 2: <header> als Flex-Container (flex-direction: column)
+         → Inhalt wird zentriert gestapelt -->
+    <header>
+        <h1>Willkommen im Café&nbsp;Lernpause</h1>
+        <p>Pause vom Lernen? Pause zum Lernen? Hier bist du genau richtig!</p>
+    </header>
+
+    <section id="about">
+        <h2>Über uns</h2>
+        <p>Genieße eine <strong>Tasse Kaffee oder Tee</strong> und lass dich von unseren leckeren Snacks verwöhnen.
+            Egal, ob du eine kurze Auszeit brauchst oder dich auf deine nächste Lernsession vorbereiten möchtest,
+            im Café Lernpause findest du die perfekte Atmosphäre zum Entspannen und Auftanken. Komm vorbei und
+            gönn dir eine Pause, die dich wieder voller Energie zurück ins Lernen bringt!</p>
+    </section>
+
+    <!-- FLEXBOX 3: .two-col → #cafe und #coffee nebeneinander
+         flex: 1 auf den Kind-Sections → gleiche Breite -->
+    <div class="two-col">
+
+        <section id="cafe">
+            <h2>Unser Café</h2>
+            <img src="daan-evers-tKN1WXrzQ3s-unsplash.jpg" alt="Bild vom Café innen" />
+            <p>
+                Wir sind ganz in der Nähe der <a href="https://www.htwg-konstanz.de/">HTWG Konstanz</a>.
+            </p>
+        </section>
+
+        <section id="coffee">
+            <h2>Unsere Kaffeespezialitäten</h2>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhZmV8ZW58MHx8MHx8fDA%3D"
+                alt="Cappucino" />
+            <p>Wir bieten</p>
+
+            <!-- FLEXBOX 4: .coffee-cards → <li> als gleichmäßig verteilte Karten
+                 space-around + flex-wrap -->
+            <ul class="coffee-cards">
+                <li>Filterkaffee</li>
+                <li>Espresso</li>
+                <li>Cappucino</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <section id="openinghours">
+        <h2>Öffnungszeiten</h2>
+
+        <!-- FLEXBOX 5: Jede .hours-row ist ein Flex-Container
+             justify-content: space-between → Tag links, Uhrzeit rechts -->
+        <div class="hours-list">
+            <div class="hours-row header-row">
+                <span>Tag</span>
+                <span>Zeit</span>
+            </div>
+            <div class="hours-row">
+                <span>Montag-Donnerstag</span>
+                <span>10-18 Uhr</span>
+            </div>
+            <div class="hours-row">
+                <span>Freitag, Samstag</span>
+                <span>10-22 Uhr</span>
+            </div>
+            <div class="hours-row">
+                <span>Sonntag</span>
+                <span>9-14 Uhr</span>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

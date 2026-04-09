@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Lernpause</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            max-height: 400px;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: saddlebrown;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: saddlebrown;
+        }
+
+        a::before {
+            content: "→";
+        }
+
+        nav a::before {
+            content: "";
+        }
+
+        .banner {
+            color: lightyellow;
+            background-color: saddlebrown;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        #about {
+            background-color: #f5efe6;
+            padding: 10px 0px;
+        }
+
+        @media (min-width: 768px) {
+            #coffee, #openinghours {
+                display: inline-block;
+                width: 40%;
+                vertical-align: top;
+                margin: 20px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #about, #coffee, #openinghours {
+                display: inline-block;
+                width: 25%;
+                vertical-align: top;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">Dies ist keine echte Webseite, sondern nur eine Demo.</div>
+    Zur Seite mit Bootstrap <a href="home-bootstrap.html">home-bootstrap.html</a>
+    <hr />
+    <nav>
+        <a href="#cafe">Das Café</a> |
+        <a href="#about">Über uns</a> |
+        <a href="#coffee">Kaffeespezialitäten</a> |
+        <a href="#openinghours">Öffnungszeiten</a>
+    </nav>
+    <header>
+        <h1>Willkommen im Café&nbsp;Lernpause</h1>
+        <h2>Pause vom Lernen? Pause zum Lernen? Hier bist du genau richtig!</h2>
+        <img src="daan-evers-tKN1WXrzQ3s-unsplash.jpg" alt="Bild vom Café innen" />
+    </header>
+    <main>
+        <section id="cafe">
+            <h3>Das Café</h3>
+            <p>Wir sind ganz in der Nähe der <a href="https://www.htwg-konstanz.de/">HTWG Konstanz</a>.
+            Genieße eine <strong>Tasse Kaffee oder Tee</strong> und lass dich von unseren leckeren Snacks verwöhnen.</p>
+        </section>
+        <section id="about">
+            <h3>Über uns</h3>
+            <p>Egal, ob du eine kurze Auszeit brauchst oder dich auf deine nächste Lernsession vorbereiten möchtest,
+                im Café Lernpause findest du die perfekte Atmosphäre zum Entspannen und Auftanken.
+                Komm vorbei und gönn dir eine Pause, die dich wieder voller Energie zurück ins Lernen bringt!</p>
+        </section>
+        <section id="coffee">
+            <h3>Unsere Kaffeespezialitäten</h3>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhZmV8ZW58MHx8MHx8fDA%3D"
+                alt="Cappucino" />
+            <ul>
+                <li>Filterkaffee</li>
+                <li><em>Espresso</em></li>
+                <li>Cappucino</li>
+                <li>Latte Macchiato</li>
+                <li>Flat White</li>
+            </ul>
+            <p>und vieles mehr...</p>
+        </section>
+        <section id="openinghours">
+            <h3>Öffnungszeiten</h3>
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Zeit</th>
+                </tr>
+                <tr>
+                    <td>Montag-Donnerstag</td>
+                    <td>10-18 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Freitag, Samstag</td>
+                    <td>10-22 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Sonntag</td>
+                    <td>9-14 Uhr</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Café Lernpause - Musterstraße 5 - 78462 <a href="https://www.konstanz.de/start">Konstanz</a> -
+            Tel: 07531 12345, <a href="mailto:info@cafe-lernpause.de?subject=Anfrage">info@cafe-lernpause.de</a>
+        </p>
+        Link zur Webtech-Begrüßung: <a href="wete.html">Webtechnologien</a>
+    </footer>
+</body>
+
+</html>

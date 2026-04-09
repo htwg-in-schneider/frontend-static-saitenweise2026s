@@ -1,0 +1,60 @@
+
+* {
+    box-sizing: border-box;
+}
+
+table,
+th,
+td {
+    border: 1px solid black
+}
+
+th,
+td {
+    padding: 8px 20px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+h2 {
+    color: rgb(111, 64, 2);
+}
+
+nav {
+    font-size: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+#about {
+    border: 1px solid rgb(111, 64, 2);;
+}
+
+.important {
+    font-size: 120%;
+    background-color: yellow;
+}
+
+.demo {
+    background-color: yellow;
+    border-width: 1px 4px;
+    border-color: red;
+    border-style: solid;
+    margin: 10px;
+    padding: 0px 20px;
+}

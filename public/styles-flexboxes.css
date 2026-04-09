@@ -1,0 +1,130 @@
+/* Basis-Styles (übernommen aus styles.css) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+h2 {
+    color: red;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+section {
+    padding: 16px 24px;
+}
+
+#about {
+    border: 1px solid red;
+}
+
+/* ── FLEXBOX 1: Navigation ────────────────────────────────────────
+           display: flex        → macht <nav> zum Flex-Container;
+                                  die Kinder (<a>) werden zu Flex-Items
+           justify-content      → verteilt Items entlang der Hauptachse (→)
+                       center   → alle Items zusammen zentriert
+           gap                  → Abstand zwischen Items (kein margin nötig)
+        ─────────────────────────────────────────────────────────────────── */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 20px;
+    background-color: #f5f5f5;
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ── FLEXBOX 2: Header (Spalten-Richtung, zentriert) ─────────────
+           flex-direction: column  → Items untereinander (Hauptachse wird ↓)
+           align-items: center    → zentriert Items auf der Querachse (→)
+        ─────────────────────────────────────────────────────────────────── */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff8f0;
+}
+
+/* ── FLEXBOX 3: Zweispalten-Layout ──────────────────────────────
+           .two-col ist der Flex-Container für #cafe und #coffee.
+           align-items: flex-start → Kinder richten sich oben aus
+                                     (ohne das würden sie gleichhoch gezogen)
+        ─────────────────────────────────────────────────────────────────── */
+.two-col {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* flex: 1  →  Kurzform für flex-grow:1 flex-shrink:1 flex-basis:0
+                       Jedes Kind bekommt gleich viel verfügbaren Platz       */
+.two-col>section {
+    flex: 1;
+}
+
+/* ── FLEXBOX 4: Kaffeespezialitäten als Karten ───────────────────
+           Die <li>-Elemente werden zu Flex-Items.
+           justify-content: space-around → gleichmäßige Abstände um Items
+           flex-wrap: wrap               → Karten brechen bei wenig Platz um
+        ─────────────────────────────────────────────────────────────────── */
+.coffee-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.coffee-cards li {
+    background-color: #fff3e0;
+    border: 1px solid #e0a050;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* ── FLEXBOX 5: Öffnungszeiten-Zeilen ───────────────────────────
+           Jede .hours-row ist ein eigener Flex-Container.
+           justify-content: space-between → erstes Item links, zweites rechts
+        ─────────────────────────────────────────────────────────────────── */
+.hours-list {
+    max-width: 420px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 4px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hours-row.header-row {
+    font-weight: bold;
+    border-bottom: 2px solid #aaa;
+}
